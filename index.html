@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">
+          <h1>Mind Vault</h1>
+        </div>
+        <div class="right">
+          <button id="changeTheme">
+            <i class="ri-sun-fill" id="d-sun"></i>
+            <i class="ri-sun-line" id="l-sun"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div id="card">
+        <div class="heading">
+          <h1>Today's Prompt</h1>
+        </div>
+
+        <div class="subheading">
+          <p>What’s one thing your heart is trying to tell you today?</p>
+        </div>
+
+        <textarea
+          id="userLog"
+          name="userLog"
+          rows="2"
+          placeholder="Type your thoughts here..."
+          spellcheck="true"
+          autocomplete="off"
+          autocapitalize="sentences"
+          aria-label="Reflection input"
+        ></textarea>
+
+        <div class="buttons">
+          <div id="newPrompt">
+            <button>New Prompt</button>
+          </div>
+
+          <div id="save">
+            <button>Save</button>
+          </div>
+        </div>
+
+        <div class="showHistory">
+          <button id="showHistoryBtn">Show History</button>
+        </div>
+
+        <div id="history" class="history"></div>
+
+        <div id="deleteAll">
+          <button id="deleteAllBtn">Delete History</button>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+      integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/animation.js"></script>
+  </body>
+</html>

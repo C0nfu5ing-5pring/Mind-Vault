@@ -1,0 +1,318 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: #fff;
+  color: #111;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+}
+
+.light {
+  background-color: white;
+  color: black;
+}
+
+header {
+  padding: 2rem 3rem;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header nav .left h1 {
+  font-size: 2rem;
+  line-height: 1;
+}
+@media (min-width: 950px) {
+  header nav .left h1 {
+    font-size: 2.8rem;
+  }
+}
+header nav .right button {
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+header nav .right button #l-sun {
+  color: black;
+  background-color: white;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+}
+header nav .right button #d-sun {
+  color: white;
+  background-color: black;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+}
+header nav .right button:active {
+  transform: scale(0.95);
+}
+
+main {
+  padding: 2rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main #card {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+main #card .heading {
+  text-align: center;
+  font-size: 1.5rem;
+  white-space: nowrap;
+  line-height: 1;
+  font-weight: 900;
+}
+main #card .subheading {
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: 400;
+}
+main #card textarea {
+  padding: 1rem 2rem;
+  width: 100%;
+  margin: auto;
+  border-radius: 0.8rem;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.3rem;
+  text-align: center;
+}
+main #card textarea:focus {
+  outline: none;
+  border: 2px solid black;
+  box-shadow: 0 0 0 4px rgba(3, 2, 2, 0.2);
+}
+main #card .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+main #card .buttons div#newPrompt button,
+main #card .buttons div#save button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 999px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  background-color: black;
+  color: white;
+}
+.light main #card .buttons div#newPrompt button,
+.light main #card .buttons div#save button {
+  background-color: black;
+  color: white;
+}
+.dark main #card .buttons div#newPrompt button,
+.dark main #card .buttons div#save button {
+  background-color: white;
+  color: black;
+}
+main #card .buttons div#newPrompt button:hover,
+main #card .buttons div#save button:hover {
+  opacity: 0.85;
+}
+main #card .buttons div#newPrompt button:active,
+main #card .buttons div#save button:active {
+  transform: scale(0.96);
+}
+@media (min-width: 950px) {
+  main #card .buttons div#newPrompt button,
+  main #card .buttons div#save button {
+    font-size: 1.3rem;
+  }
+}
+main #card .showHistory {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main #card .showHistory button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 999px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  background-color: black;
+  color: white;
+}
+.light main #card .showHistory button {
+  background-color: black;
+  color: white;
+}
+.dark main #card .showHistory button {
+  background-color: white;
+  color: black;
+}
+main #card .showHistory button:hover {
+  opacity: 0.85;
+}
+main #card .showHistory button:active {
+  transform: scale(0.96);
+}
+@media (min-width: 950px) {
+  main #card .showHistory button {
+    font-size: 1.3rem;
+  }
+}
+main #card #history {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  color: black;
+  background-color: white;
+}
+body.dark main #card #history {
+  background-color: black;
+  color: white;
+}
+main #card #history div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #f5f5f5;
+  color: black;
+  position: relative;
+}
+body.dark main #card #history div {
+  background-color: #222;
+  color: #fff;
+}
+main #card #history div .prompt {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: inherit;
+}
+@media (min-width: 600px) {
+  main #card #history div .prompt {
+    font-size: 1.3rem;
+  }
+}
+main #card #history div .response {
+  font-weight: 300;
+  font-size: 1rem;
+  color: black;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+@media (min-width: 600px) {
+  main #card #history div .response {
+    font-size: 1.2rem;
+  }
+}
+body.dark main #card #history div .response {
+  color: #ccc;
+}
+main #card #history div .delete-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  border: none;
+  background: transparent;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.2s ease;
+}
+main #card #history div .delete-btn:hover {
+  color: red;
+}
+@media (max-width: 450px) {
+  main #card #history div .delete-btn {
+    top: auto;
+    bottom: 0.5rem;
+  }
+}
+main #card #deleteAll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main #card #deleteAll button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 999px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  background-color: black;
+  color: white;
+}
+.light main #card #deleteAll button {
+  background-color: black;
+  color: white;
+}
+.dark main #card #deleteAll button {
+  background-color: white;
+  color: black;
+}
+main #card #deleteAll button:hover {
+  opacity: 0.85;
+}
+main #card #deleteAll button:active {
+  transform: scale(0.96);
+}
+@media (min-width: 950px) {
+  main #card #deleteAll button {
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 850px) {
+  main #card .heading {
+    font-size: 3.8rem;
+  }
+  main #card .subheading {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 600px) {
+  main #card textarea {
+    width: 70%;
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 950px) {
+  #card {
+    gap: 2rem;
+  }
+}/*# sourceMappingURL=styles.css.map */
